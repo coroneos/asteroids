@@ -33,9 +33,9 @@ class Player(CircleShape):
         if keys[pygame.K_d]:
             self.rotate(dt)
         if keys[pygame.K_SPACE]:
-            self.shoot(dt)
+            self.shoot()
 
-    def shoot(self, dt):
+    def shoot(self):
         if self.shoot_timer > 0:
             return
         self.shoot_timer = PLAYER_SHOOT_COOLDOWN
